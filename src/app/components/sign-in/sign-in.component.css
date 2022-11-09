@@ -1,0 +1,16 @@
+.myBtn{
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    flex-direction: column !important;
+    height: 75vh;
+    
+
+}
+
+.arr-btn{
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    flex-direction: column !important;
+}

@@ -32,8 +32,8 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kb",
-                  "maximumError": "1mb"
+                  "maximumWarning": "4mb",
+                  "maximumError": "5mb"
                 },
                 {
                   "type": "anyComponentStyle",
@@ -94,8 +94,21 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "angularFileUpload:build:production",
+            "firebaseProject": "angularfileupload-7ab42",
+            "firebaseHostingSite": "angularfileupload-7ab42"
+          }
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "ff29b741-2d61-41dc-a861-5a98f12de778"
   }
 }
