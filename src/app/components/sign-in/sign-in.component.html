@@ -1,0 +1,42 @@
+<div class="myBtn mt-5">
+
+    <form class="myBtn bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+        <h6 class="m-4 font-extrabold tracking-tight leading-none text-gray-900 md:text-4xl dark:text-white">Login to your account</h6>
+        <div class="mb-4">
+            <label class="block text-gray-700 text-sm font-bold mb-2" for="userName">
+          User E-mail
+        </label>
+            <input #userName required class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="userName" type="text" placeholder="User E-mail">
+        </div>
+        <div class="mb-6">
+            <label class="block text-gray-700 text-sm font-bold mb-2" for="password">
+          Password
+        </label>
+            <input #userPassword required class="shadow appearance-none border  rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" id="password" type="password" placeholder="******************">
+        </div>
+        <div class="arr-btn">
+            <button (click)="authService.SignIn(userName.value, userPassword.value)" class="relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-500 to-pink-500 group-hover:from-purple-500 group-hover:to-pink-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800">
+            <span class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
+                Sign In
+            </span>
+        </button>
+            <div>
+                <span class="text-gray-500 font-bold"><span class="orInner">Or</span></span>
+            </div>
+            <!-- Continue with Google -->
+            <div>
+                <button (click)="authService.GoogleAuth()" class="m-3 relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-500 to-pink-500 group-hover:from-purple-500 group-hover:to-pink-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800">
+            <span class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
+                Login With Google
+            </span>
+            </button>
+            </div>
+            <a class="inline-block align-baseline font-bold text-sm text-dark-500 hover:text-blue-800" routerLink="/forgot-password">
+          Forgot Password?
+        </a>
+            <div class="redirectToLogin inline-block align-baseline font-bold text-sm text-dark-500 hover:text-blue-800">
+                <span>Don't have an account?<span class="redirect" routerLink="/register-user"> Sign Up</span></span>
+            </div>
+        </div>
+    </form>
+</div>

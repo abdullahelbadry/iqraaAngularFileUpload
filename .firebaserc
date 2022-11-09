@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "angularfileupload-7ab42"
+  },
+  "targets": {
+    "angularfileupload-7ab42": {
+      "hosting": {
+        "angularFileUpload": [
+          "angularfileupload-7ab42"
+        ]
+      }
+    }
+  }
+}

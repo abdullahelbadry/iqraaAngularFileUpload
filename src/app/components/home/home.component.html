@@ -1,0 +1,23 @@
+
+<div *ngIf="authService.userData as user" class="bg-gray-100">
+  <div class="mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="mx-auto sm:py-24 lg:max-w-none lg:py-32">
+      <h2 class="m-3 text-2xl font-bold text-gray-900">User Profile</h2>
+
+      <div class="lg:grid lg:grid-cols-3">
+        <div class="flex">
+          <div class="rounded-lg bg-white">
+            <img src="{{(user.photoURL) ? user.photoURL : '/assets/dummy-user.png'}}"
+            alt="{{user.displayName}}" class="w-full h-full">
+          </div>
+          <div class="m-3"><h3 class="mt-6 text-sm text-gray-500">
+            <strong>{{(user.displayName) ? user.displayName : 'User'}}</strong>
+          </h3>
+          <p class="text-base font-semibold text-gray-900">User ID: <strong>{{user.uid}}</strong></p>
+          <p class="text-base font-semibold text-gray-900">E-mail: <strong>{{user.email}}</strong></p>
+          <p class="text-base font-semibold text-gray-900">Email Verification: <strong>{{user.emailVerified}}</strong></p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

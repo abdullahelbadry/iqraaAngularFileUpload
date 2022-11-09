@@ -1,0 +1,12 @@
+<div class="m-6 card-header flex justify-center">List of Files</div>
+<div class="m-3 card flex justify-center">
+    <ul
+      class="list-group list-group-flush"
+      *ngFor="let file of fileUploads"
+    >
+      <li class="list-group-item">
+        <app-upload-details [fileUpload]='file'></app-upload-details>
+        
+      </li>
+    </ul>
+  </div>
