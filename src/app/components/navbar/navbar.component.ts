@@ -12,5 +12,8 @@ export class NavbarComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  isAuthenticated(){
+    return this.authService.isAuthenticated;
+  }
 
 }
